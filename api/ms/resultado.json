@@ -1,11 +1,11 @@
 {
- "acumulou":"false",
- "dezena_sorteada_1":9,
- "dezena_sorteada_2":19,
- "dezena_sorteada_3":22,
- "dezena_sorteada_4":24,
- "dezena_sorteada_5":50,
- "dezena_sorteada_6":60,
- "valor_proximo_sorteio":"R$3.000.000,00",
- "data_proximo_sorteio":"22/08/2023"
+ "acumulou":"true",
+ "dezena_sorteada_1":10,
+ "dezena_sorteada_2":15,
+ "dezena_sorteada_3":20,
+ "dezena_sorteada_4":35,
+ "dezena_sorteada_5":37,
+ "dezena_sorteada_6":59,
+ "valor_proximo_sorteio":"R$5.500.000,00",
+ "data_proximo_sorteio":"24/08/2023"
 }
