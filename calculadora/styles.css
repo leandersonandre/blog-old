@@ -1,0 +1,42 @@
+
+
+body{
+    margin:0;
+    padding:0;
+    #background:#4d3786;
+}
+
+header{
+    background:#5B4B8E;
+    color:#ffffff;
+    padding:8px;
+}
+
+main{
+    padding:18px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.divisor-footer{
+    background:#fd9c00;
+    height:8px;
+    width:100%;
+}
+footer{
+    background:white;
+    padding:16px;
+}
+
+.footer-imagens {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 80px;
+    align-items: center;
+}
