@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://latex.now.sh/style.css">
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <link rel="stylesheet" href="https://latex.now.sh/prism/prism.css">
+        <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+        <title>FastReader | Prof. MSc. Leanderson André</title>
+        <meta name="description" content="Entrada de dados rapido para programaçao competitiva em Java."/>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5BR0QT7C4"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-B5BR0QT7C4');
+        </script>
+    </head>
+    <body>
+<header>
+    <h1>FastReader</h1>
+    <p class="author">
+    Leanderson André <br />
+    09 de Maio 2024
+    </p>
+        
+    </header>
+    <div class="abstract">
+        <h2>Resumo</h2>
+        <p>Entrada de dados rapido para programaçao competitiva em Java.</p>
+    </div>
+    
+        <main>
+        <article >
+                <p>Exemplo de codigo utilizando a classe FastReader.</h3>
+                <pre>
+                <code>
+import java.io.BufferedReader; 
+import java.io.IOException; 
+import java.io.InputStreamReader; 
+import java.util.Scanner; 
+import java.util.StringTokenizer; 
+
+public class Main { 
+    static class FastReader { 
+        BufferedReader br; 
+        StringTokenizer st; 
+
+        public FastReader() 
+        { 
+            br = new BufferedReader( 
+                new InputStreamReader(System.in)); 
+        } 
+
+        String next() 
+        { 
+            while (st == null || !st.hasMoreElements()) { 
+                try { 
+                    st = new StringTokenizer(br.readLine()); 
+                } 
+                catch (IOException e) { 
+                    e.printStackTrace(); 
+                } 
+            } 
+            return st.nextToken(); 
+        } 
+
+        int nextInt() { return Integer.parseInt(next()); } 
+
+        long nextLong() { return Long.parseLong(next()); } 
+
+        double nextDouble() 
+        { 
+            return Double.parseDouble(next()); 
+        } 
+
+        String nextLine() 
+        { 
+            String str = ""; 
+            try { 
+                if(st.hasMoreTokens()){ 
+                    str = st.nextToken("\n"); 
+                } 
+                else{ 
+                    str = br.readLine(); 
+                } 
+            } 
+            catch (IOException e) { 
+                e.printStackTrace(); 
+            } 
+            return str; 
+        } 
+    } 
+
+    public static void main(String[] args) 
+    { 
+        FastReader s = new FastReader(); 
+        int n = s.nextInt(); 
+        int k = s.nextInt(); 
+        int count = 0; 
+        while (n-- > 0) { 
+            int x = s.nextInt(); 
+            if (x % k == 0) 
+                count++; 
+        } 
+        System.out.println(count); 
+    } 
+}
+                </code>
+                </pre>
+</article>
+        </main>
+    </body>
+</html>
