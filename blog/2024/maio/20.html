@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://latex.now.sh/style.css">
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <link rel="stylesheet" href="https://latex.now.sh/prism/prism.css">
+        <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+        <title>Escrever em um arquivo com Java | Prof. MSc. Leanderson André</title>
+        <meta name="description" content="Escrita de arquivo em Java."/>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5BR0QT7C4"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-B5BR0QT7C4');
+        </script>
+    </head>
+    <body>
+<header>
+    <h1>Escrever em um arquivo com Java </h1>
+    <p class="author">
+    Leanderson André <br />
+    20 de Maio 2024
+    </p>
+        
+    </header>
+    <div class="abstract">
+        <h2>Resumo</h2>
+        <p>Escrever dados em um arquivo com Java.</p>
+    </div>
+    
+        <main>
+        <article >
+            <p>A escrita de arquivo pode ser realizada com a classe Files.
+            O primeiro passo é obter o arquivo que deseja escrever com a classe Paths. O arquivo não precisa existir previamente.
+            Na sequencia deve ser chamado o método Files.write informando o arquivo e a mensagem.
+            <b>Atenção:</b> O arquivo é sobrescrito a cada execução do código.</p>
+                   
+            <pre>
+                <code>
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+
+public class EscreverArquivo {
+
+    public static void main(String[] args) {
+        String filename = "teste.txt";
+        String mensagem = "Olá arquivo";
+        try {
+            Files.write(Paths.get(filename)
+                       , mensagem.getBytes());
+        } catch (IOException e) {
+            System.out.println("Erro ao salvar arquivo");
+            e.printStackTrace();
+        }
+    }
+}
+                </code>
+                </pre>
+                <p>Para adicionar novas informações no final de um arquivo existente é preciso abri-lo com o modo APPEND.</p>
+                <p><b>Atenção:</b> O arquivo deve existir previamente.</p>
+                <pre>
+                <code>
+Files.write(Paths.get(filename)
+           , mensagem.getBytes()
+           // Adicionar novas informações no final do arquivo                    
+           , StandardOpenOption.APPEND);</code>
+                </pre>
+</article>
+        </main>
+    </body>
+</html>
